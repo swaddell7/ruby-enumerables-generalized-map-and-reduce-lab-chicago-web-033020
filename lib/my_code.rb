@@ -16,4 +16,6 @@ def reduce(source_array, starting_point = nil)
   else
     num1 = source_array[0]
     index = 1
+  end
+  
 end
