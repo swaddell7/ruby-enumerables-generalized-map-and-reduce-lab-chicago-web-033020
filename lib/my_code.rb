@@ -9,16 +9,16 @@ def map(source_array)
   new_array
 end
 
-def reduce(source_array, starting_point = nil)
-  if starting_point
-    sum = starting_point
+def reduce(array, sv = nil)
+  if sv
+    sum = sv
     index = 0
   else
-    sum = source_array[0]
+    sum = array[0]
     index = 1
   end
   
-  while index < source_array.length do 
+  while index < array.length do 
     yield(sum, array[index])
     index += 1 
   end
