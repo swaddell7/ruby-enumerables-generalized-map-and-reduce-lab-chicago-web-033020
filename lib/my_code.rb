@@ -11,14 +11,14 @@ end
 
 def reduce(source_array, starting_point = nil)
   if starting_point
-    num1 = starting_point
+    sum = starting_point
     index = 0
   else
-    num1 = source_array[0]
+    sum = source_array[0]
     index = 1
   end
   
   while index < source_array.length do 
-    yield(num1, array[index])
+    yield(sum, array[index])
   
 end
