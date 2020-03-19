@@ -9,3 +9,11 @@ def map(source_array)
   end
   new_array
 end
+
+def reduce(source_array, starting_point = 0)
+  index = 0 
+  while index < source_array.length do 
+    yield
+    index += 1
+  end
+end
