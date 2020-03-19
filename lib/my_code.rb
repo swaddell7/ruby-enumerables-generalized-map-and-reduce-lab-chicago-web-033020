@@ -9,7 +9,7 @@ def map(source_array)
   new_array
 end
 
-def reduce(array, sv = nil)
+def reduce(array, sv=nil)
   if sv
     sum = sv
     index = 0
@@ -17,9 +17,8 @@ def reduce(array, sv = nil)
     sum = array[0]
     index = 1
   end
-  
   while index < array.length do 
-    yield(sum, array[index])
+    sum = yield(sum, array[index])
     index += 1 
   end
   sum
